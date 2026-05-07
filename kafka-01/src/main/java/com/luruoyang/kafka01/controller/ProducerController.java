@@ -32,6 +32,7 @@ public class ProducerController {
 
     @GetMapping("/{msg}")
     public ResponseEntity<Boolean> sendMsgWithoutCallback(@PathVariable("msg") String msg) {
+        // 异步发送
         kafkaTemplate.send("topic1", "1", msg);
         log.info("消息已发送：{}", msg);
         return ResponseEntity.ok(Boolean.TRUE);

@@ -5,7 +5,7 @@ spring:
   application:
     name: kafka-01
   kafka:
-    bootstrap-servers: 122.51.176.159:9092
+    bootstrap-servers: 192.168.101.134:9092
     producer:
       retries: 1
       batch-size: 16384
@@ -36,8 +36,3 @@ spring:
     listener:
       missing-topics-fatal: false
       type: batch
-
-
-
-
-
